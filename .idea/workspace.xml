@@ -6,25 +6,20 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/ozon/FirstScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ozon/FirstScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ozon/FourthScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ozon/FourthScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/ozon/SecondScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ozon/SecondScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/ozon/ThirdScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ozon/ThirdScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/QA.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/ru/ozon/FirstScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/ozon/FirstScene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/ozon/FourthScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/ozon/FourthScene.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/ru/ozon/SecondScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/ozon/SecondScene.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/ru/ozon/ThirdScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/ozon/ThirdScene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/ozon/WebDriverSettings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/ozon/WebDriverSettings.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ErrorTreeViewConfiguration">
-    <option name="autoscrollToSource" value="true" />
-    <option name="hideInfoMessages" value="true" />
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
-    <option name="HIDE_INFO_MESSAGES" value="true" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="QA" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -36,20 +31,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1aRXaxFqjZB9zSZD12uW4DmrA3c" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -64,8 +51,8 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
-  <component name="RunManager" selected="JUnit.ThirdScene.openCatalog">
-    <configuration name="FirstScene.loginAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.FourthScene.forth">
+    <configuration name="FourthScene.forth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA" />
       <extension name="coverage">
         <pattern>
@@ -74,24 +61,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.ozon" />
-      <option name="MAIN_CLASS_NAME" value="ru.ozon.FirstScene" />
-      <option name="METHOD_NAME" value="loginAccount" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FirstScene.loginAccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QA" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.ozon.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.ozon" />
-      <option name="MAIN_CLASS_NAME" value="ru.ozon.FirstScene" />
-      <option name="METHOD_NAME" value="loginAccountTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.ozon.FourthScene" />
+      <option name="METHOD_NAME" value="forth" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -113,7 +84,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SecondScene.updateCityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ThirdScene" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA" />
       <extension name="coverage">
         <pattern>
@@ -122,9 +93,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.ozon" />
-      <option name="MAIN_CLASS_NAME" value="ru.ozon.SecondScene" />
-      <option name="METHOD_NAME" value="updateCityTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="ru.ozon.ThirdScene" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,13 +115,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ThirdScene.third" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.ozon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.ozon" />
+      <option name="MAIN_CLASS_NAME" value="ru.ozon.ThirdScene" />
+      <option name="METHOD_NAME" value="third" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FourthScene.forth" />
+        <item itemvalue="JUnit.ThirdScene.third" />
         <item itemvalue="JUnit.ThirdScene.openCatalog" />
+        <item itemvalue="JUnit.ThirdScene" />
         <item itemvalue="JUnit.SecondScene.loginAndCheck" />
-        <item itemvalue="JUnit.FirstScene.loginAccountTest" />
-        <item itemvalue="JUnit.SecondScene.updateCityTest" />
-        <item itemvalue="JUnit.FirstScene.loginAccount" />
       </list>
     </recent_temporary>
   </component>
@@ -169,12 +155,22 @@
       <workItem from="1586767085542" duration="141000" />
       <workItem from="1586801938970" duration="5224000" />
       <workItem from="1586851888846" duration="5724000" />
-      <workItem from="1586882843335" duration="5523000" />
+      <workItem from="1586882843335" duration="5594000" />
+      <workItem from="1586956304766" duration="1236000" />
+      <workItem from="1586960604408" duration="1362000" />
+      <workItem from="1586969600427" duration="62000" />
+      <workItem from="1586980490318" duration="6000" />
+      <workItem from="1587057412472" duration="41000" />
+      <workItem from="1587317056708" duration="10169000" />
+      <workItem from="1587370531512" duration="5000" />
+      <workItem from="1587380383462" duration="259000" />
+      <workItem from="1587394304327" duration="2000" />
+      <workItem from="1587547095622" duration="18320000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -188,54 +184,62 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586856170117" />
+    <state x="449" y="151" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1586969197219">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="151" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1586969197219" />
     <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1586714077642">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586714077642" />
-    <state width="1493" height="214" key="GridCell.Tab.0.bottom" timestamp="1586888319340">
+    <state width="1493" height="266" key="GridCell.Tab.0.bottom" timestamp="1587566690952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="214" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586888319340" />
-    <state width="1493" height="214" key="GridCell.Tab.0.center" timestamp="1586888319339">
+    <state width="1493" height="266" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587566690952" />
+    <state width="1493" height="266" key="GridCell.Tab.0.center" timestamp="1587566690951">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="214" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586888319339" />
-    <state width="1493" height="214" key="GridCell.Tab.0.left" timestamp="1586888319339">
+    <state width="1493" height="266" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587566690951" />
+    <state width="1493" height="266" key="GridCell.Tab.0.left" timestamp="1587566690951">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="214" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586888319339" />
-    <state width="1493" height="214" key="GridCell.Tab.0.right" timestamp="1586888319339">
+    <state width="1493" height="266" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587566690951" />
+    <state width="1493" height="266" key="GridCell.Tab.0.right" timestamp="1587566690951">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="214" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586888319339" />
-    <state width="1493" height="238" key="GridCell.Tab.1.bottom" timestamp="1586886439831">
+    <state width="1493" height="266" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587566690951" />
+    <state width="1493" height="266" key="GridCell.Tab.1.bottom" timestamp="1587566690952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586886439831" />
-    <state width="1493" height="238" key="GridCell.Tab.1.center" timestamp="1586886439831">
+    <state width="1493" height="266" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587566690952" />
+    <state width="1493" height="266" key="GridCell.Tab.1.center" timestamp="1587566690952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1586886439831" />
-    <state width="1493" height="238" key="GridCell.Tab.1.left" timestamp="1586886439831">
+    <state width="1493" height="266" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587566690952" />
+    <state width="1493" height="266" key="GridCell.Tab.1.left" timestamp="1587566690952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1586886439831" />
-    <state width="1493" height="238" key="GridCell.Tab.1.right" timestamp="1586886439831">
+    <state width="1493" height="266" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587566690952" />
+    <state width="1493" height="266" key="GridCell.Tab.1.right" timestamp="1587566690952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1586886439831" />
-    <state x="299" y="70" key="Maven.ArtifactSearchDialog" timestamp="1586714371271">
+    <state width="1493" height="266" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587566690952" />
+    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1587317500383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="299" y="70" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1586714371271" />
+    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1587317500383" />
+    <state x="299" y="70" key="Maven.ArtifactSearchDialog" timestamp="1587317494793">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="299" y="70" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1587317494793" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1586805109977">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586805109977" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1586882843842">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1586960603104">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586882843841" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586960603104" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1586716422019">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

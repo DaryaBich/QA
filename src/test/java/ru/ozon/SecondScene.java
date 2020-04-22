@@ -5,11 +5,12 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static java.lang.Thread.sleep;
 
 public class SecondScene extends WebDriverSettings  {
-    public WebElement city;
 
     @Test
     // Изменение города и проверка, что он изменился
@@ -17,37 +18,46 @@ public class SecondScene extends WebDriverSettings  {
         updateCity();
         sleep(1000);
         // сравниваем текущий город с выставленным
-        Assert.assertEquals(city.getAttribute("outerText"), "Вольск");
+        String city = (chromeDriver.findElement(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[1]/div/button/span")))
+                .getAttribute("innerText");
+        Assert.assertEquals(city, "Вольск");
     }
 
     @Test
     // вход в аккаунт, изменение города и сравнение города доставки и текущего
     public void loginAndCheck() throws InterruptedException {
+        WebDriverWait webDriverWait = new WebDriverWait(chromeDriver,30);
         (new FirstScene()).loginAccount(chromeDriver); // авторизация на сайте
-        sleep(20000);
         // меняем город
         updateCity();
-        sleep(1000);
+        webDriverWait.until(ExpectedConditions.visibilityOf(chromeDriver.findElement(
+                By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[1]/div/ul/li[5]/div/a/span"))));
+        sleep(100);
         // нажатие на кнопку пункты выдачи, для просмотра города
-        (chromeDriver.findElement(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[2]/div/ul/li[5]/div/a/span"))).click();
+        (chromeDriver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div[1]/div/ul/li[5]"))).click();
+        webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]" +
+                "/div[2]/div[3]/div/div[1]")));
         // проверка совпадения городов
-        String cityForDelivery = "//*[@id=\"__nuxt\"]/div/div[1]/div[3]/div[3]/div/div[2]/div[2]/div/div[2]/div/span" +
-                "/span";
-        city = chromeDriver.findElement(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[2]/div/button/span"));
-        Assert.assertEquals(city.getAttribute("outerText"),
-                chromeDriver.findElement(By.xpath(cityForDelivery)).getAttribute("textContent"));
+        WebElement cityForDelivery = chromeDriver.findElement(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[2]/div[3]" +
+                "/div/div[2]/div[2]/div/div[2]/div/span/span"));
+        WebElement city = chromeDriver.findElement(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[1]/div/button/span"));
+        Assert.assertEquals(city.getAttribute("outerText"),cityForDelivery.getAttribute("textContent"));
     }
 
     // обновление города
     public void updateCity() throws InterruptedException {
-        city = chromeDriver.findElement(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[2]/div/button"));
+        WebDriverWait webDriverWait = new WebDriverWait(chromeDriver, 30);
+        WebElement city = chromeDriver.findElement(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[1]/div/button/span"));
         // нажатие клавиши с названием текущего города
         city.click();
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(city));
         // Блок для записи искомого города
         WebElement inputBox = chromeDriver.findElement(By.className("ui-au3"));
         // Вводим в строку поиска город Вольск
         inputBox.sendKeys("Вольск");
-        sleep(1000);
+        webDriverWait.until(ExpectedConditions.attributeToBe(chromeDriver.findElement(
+                By.xpath("//*[@id=\"__nuxt\"]/div/div[2]/div/div/div/div/ul/li[1]/a")), "outerText",
+                "Вольск, Саратовская область"));
         // Выбираем первый город из поиска - клавиша вниз и сохраняем выбор - клавиша enter
         inputBox.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
     }
