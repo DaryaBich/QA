@@ -1,37 +1,36 @@
 package ru.ozon;
-
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import jdk.nashorn.internal.runtime.regexp.joni.Regex;
+import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Locatable;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.lang.reflect.Array;
 import java.util.*;
-import java.util.function.Predicate;
 
 import static java.lang.Thread.sleep;
 
 public class ThirdScene extends WebDriverSettings {
     @Test
+   @Description(value = "поиск соковыжималки и добавление в корзину")
     public void third() throws InterruptedException {
         WebDriverWait webDriverWait = new WebDriverWait(chromeDriver, 60);
         Assert.assertTrue(searchJuicer(chromeDriver, webDriverWait));
     }
-
+   @Step("Открытие каталога, сортировка и доабвление в корзину")
     public boolean searchJuicer(ChromeDriver chromeDriver, WebDriverWait webDriverWait) throws InterruptedException {
         searchJuicersCatalog(chromeDriver, webDriverWait);
-        searchJuicerWithCondition(chromeDriver, webDriverWait);
         sleep(1000);
-        chooseSorting(chromeDriver, webDriverWait);
-        return addProduct(chromeDriver, webDriverWait);
+       boolean res1 = chooseSorting(chromeDriver, webDriverWait);
+       sleep(1000);
+        boolean res2 = searchJuicerWithCondition(chromeDriver, webDriverWait);
+        sleep(1000);
+        boolean res3 =  addProduct(chromeDriver, webDriverWait);
+        return res1 && res2 && res3;
     }
-
+@Step("Открытие каталога соковыжималок")
     public void searchJuicersCatalog(ChromeDriver chromeDriver, WebDriverWait webDriverWait)
             throws InterruptedException {
         (chromeDriver.findElement(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/header/div[1]/div[2]/div/div[1]/button")))
@@ -55,8 +54,8 @@ public class ThirdScene extends WebDriverSettings {
         // нажатие на кнопку - соковыжималки
         (chromeDriver.findElement(By.xpath(juiceMix))).click();
     }
-
-    void searchJuicerWithCondition(ChromeDriver chromeDriver, WebDriverWait webDriverWait)
+@Step("Выставление условий сортировки")
+    public boolean searchJuicerWithCondition(ChromeDriver chromeDriver, WebDriverWait webDriverWait)
             throws InterruptedException {
         By min = By.xpath("/html/body/div[1]/div/div[1]/div[2]/div[2]/div[1]/div/aside/div[2]/div[2]/div[2]/div[1]" +
                 "/input");
@@ -83,34 +82,42 @@ public class ThirdScene extends WebDriverSettings {
         maxCost.sendKeys(Keys.ENTER);
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(
                 By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[2]/div[2]/div[2]/div[3]/div[1]")));
-        Assert.assertTrue(checkingElements(chromeDriver,
-                webDriverWait, j -> Double.parseDouble(j) >= 3000.0 && Double.parseDouble(j) <= 4000.0));
+        return checkingElements(chromeDriver, webDriverWait);
     }
-
-    public boolean checkingElements(ChromeDriver chromeDriver, WebDriverWait webDriverWait,
-                                    Predicate<String> condition) throws InterruptedException {
+@Step("Проверка соковыжималок на стоимость")
+    public boolean checkingElements(ChromeDriver chromeDriver, WebDriverWait webDriverWait) throws InterruptedException,
+        NumberFormatException{
         sleep(1000);
-        List<WebElement> juicers = chromeDriver.findElementsByCssSelector("div[class=\"a4b4 a4b7 a4b6\"]");
-        List<String> prices = new ArrayList<>();
+        List<WebElement> juicers = chromeDriver.findElementsByCssSelector("div[class=\"a1r4 a1r7 a1r6\"]");
+        List<String> prices = new ArrayList<String>();
         for (WebElement w : juicers) {
-            WebElement webElement = w.findElement(By.cssSelector("div[class=\"a5n1 a5n8 a5n3\"]"));
+            WebElement webElement = w.findElement(By.cssSelector("div[class=\"a4c5 a4d1 a4c7\"]"));
             String cost = webElement.getAttribute("textContent");
             prices.add(cost.substring(0, cost.indexOf("₽"))
-                    .replace("₽", "")
+                    .replace(" ", "")
                     .replace(" ", ""));
         }
-
+        sleep(1000);
+        WebElement w =  juicers.get(0).findElement(By.cssSelector("a[class=\"a3p5 tile-hover-target\"]"));
+       w.click();
+       By put = By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[3]/div[2]/div[2]/div/div[3]/div[2]/div/div[1]/div/div/" +
+               "div/div/div[5]/div/div/div/div/div/div/button/div/div");
+       webDriverWait.until(ExpectedConditions.presenceOfElementLocated(put));
+       WebElement w2 = chromeDriver.findElement(put);
+       w2.click();
         for (String price : prices) {
-            if (!condition.test(price)) {
+            if (Integer.parseInt(price) < 3000.0 || Integer.parseInt(price) > 4000.0) {
                 return false;
             }
         }
         return true;
     }
-
-    public void chooseSorting(ChromeDriver chromeDriver, WebDriverWait webDriverWait) throws InterruptedException {
-        By sort = By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div/div");
+@Step("Сортировка по возрастанию и проверка")
+    public boolean chooseSorting(ChromeDriver chromeDriver, WebDriverWait webDriverWait) throws InterruptedException {
+        By sort = By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div/div/div[1]");
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(sort));
+    ((JavascriptExecutor) chromeDriver).executeScript("arguments[0].scrollIntoView();"
+            , chromeDriver.findElement(sort));
         WebElement sorter = chromeDriver.findElement(sort);
         sorter.click();
         sleep(1000);
@@ -118,16 +125,11 @@ public class ThirdScene extends WebDriverSettings {
                 "input[class=\"ui-a1f3\"]")))
                 .sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
         WebElement sortingBy = chromeDriver.findElement(By.cssSelector("div[class=\"ui-a1k9\"]"));
-        Assert.assertEquals(sortingBy.getAttribute("outerText"), "Сначала дешевые");
+        return  sortingBy.getAttribute("outerText").equals("Сначала дешевые");
     }
-
+@Step("Добавление в корзину и изменения количества")
     public boolean addProduct(ChromeDriver chromeDriver, WebDriverWait webDriverWait)
             throws InterruptedException {
-        By adding = By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[2]/div[2]/div[2]/div[3]/div[1]/div/div/div[1]/div/div" +
-                "/div[3]/div[2]/div/div/button/div");
-        webDriverWait.until(ExpectedConditions.presenceOfElementLocated(adding));
-        (chromeDriver.findElement(adding)).click();
-        sleep(1000);
         (chromeDriver.findElement(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/header/div[1]/div[4]/a[2]"))).click();
         By addFive = By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div/div/div[3]/div[5]/div[1]/div[1]/div/div[2]/div[3]/" +
                 "div[4]/div/div[1]/div/div[1]/div/div");

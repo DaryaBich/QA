@@ -1,5 +1,6 @@
 package ru.ozon;
 
+import io.qameta.allure.*;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -13,13 +14,14 @@ import static java.lang.Thread.sleep;
 
 public class FirstScene extends WebDriverSettings {
     @Test
+    @Description(value = "Вход в аккаунт и проверка значка на Кабинет")
     public void loginAccountTest() throws InterruptedException {
         loginAccount(chromeDriver);
         Assert.assertEquals("0 Кабинет", chromeDriver.findElement(
                 By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/header/div[1]/div[4]/div[1]/a"))
                 .getAttribute("textContent"));
     }
-
+    @Step("Вход в аккаунт")
     public void loginAccount(ChromeDriver chromeDriver) throws InterruptedException {
         WebDriverWait webDriverWait = new WebDriverWait(chromeDriver, 30);
         WebElement buttonIn = chromeDriver.findElement(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/header/div[1]/div[4]" +

@@ -1,5 +1,8 @@
 package ru.ozon;
 
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -18,21 +21,22 @@ import static java.lang.Thread.sleep;
 
 public class FourthScene extends WebDriverSettings {
     @Test
+    @Description(value = "Поиск соковыжималок, выставление мощности, добавление в корзину")
     public void forth() throws InterruptedException {
         WebDriverWait webDriverWait = new WebDriverWait(chromeDriver, 60);
         ThirdScene thirdScene = new ThirdScene();
         thirdScene.searchJuicersCatalog(chromeDriver, webDriverWait);
         sleep(1000);
-        thirdScene.searchJuicerWithCondition(chromeDriver, webDriverWait);
-        sleep(1000);
-        thirdScene.chooseSorting(chromeDriver, webDriverWait);
-        sleep(1000);
+        boolean res1 = thirdScene.chooseSorting(chromeDriver, webDriverWait);
         sortingByEnergy(chromeDriver, webDriverWait);
         sleep(1000);
-        Assert.assertTrue(thirdScene.addProduct(chromeDriver, webDriverWait));
+        boolean res2 = thirdScene.searchJuicerWithCondition(chromeDriver, webDriverWait);
+        sleep(1000);
+        boolean res3 = thirdScene.addProduct(chromeDriver, webDriverWait);
+        Assert.assertTrue(res1 && res2 && res3);
     }
-
-    private void sortingByEnergy(ChromeDriver chromeDriver, WebDriverWait webDriverWait) {
+@Step("выставление условия мощности")
+    public void sortingByEnergy(ChromeDriver chromeDriver, WebDriverWait webDriverWait) {
         WebElement min = chromeDriver.findElement(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[2]/div[2]/div[1]/div" +
                 "/aside/div[10]/div[2]/div[2]/div[1]/input"));
         min.sendKeys(Keys.CONTROL + "a", Keys.BACK_SPACE);

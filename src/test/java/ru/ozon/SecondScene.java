@@ -1,5 +1,8 @@
 package ru.ozon;
 
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -13,7 +16,7 @@ import static java.lang.Thread.sleep;
 public class SecondScene extends WebDriverSettings  {
 
     @Test
-    // Изменение города и проверка, что он изменился
+   @Description("Обновление города на Вольск, проверка выставления")
     public void updateCityTest() throws InterruptedException {
         updateCity();
         sleep(1000);
@@ -24,7 +27,7 @@ public class SecondScene extends WebDriverSettings  {
     }
 
     @Test
-    // вход в аккаунт, изменение города и сравнение города доставки и текущего
+    @Description(value = "вход в аккаунт, изменение города и сравнение города доставки и текущего")
     public void loginAndCheck() throws InterruptedException {
         WebDriverWait webDriverWait = new WebDriverWait(chromeDriver,30);
         (new FirstScene()).loginAccount(chromeDriver); // авторизация на сайте
@@ -44,7 +47,7 @@ public class SecondScene extends WebDriverSettings  {
         Assert.assertEquals(city.getAttribute("outerText"),cityForDelivery.getAttribute("textContent"));
     }
 
-    // обновление города
+    @Step("Обновление города")
     public void updateCity() throws InterruptedException {
         WebDriverWait webDriverWait = new WebDriverWait(chromeDriver, 30);
         WebElement city = chromeDriver.findElement(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[1]/div/button/span"));
