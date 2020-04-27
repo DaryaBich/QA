@@ -8,9 +8,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static java.lang.Thread.sleep;
 
 public class ActionsWithAccount {
-    private By buttonLogIn = By.cssSelector("div[class=\"b6w6 c2v0\"]");
+    private By buttonLogIn = By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/header/div[1]/div[4]/div[1]/div[1]");
     private By inputPhone = By.name("phone");
-    private By getCode = By.cssSelector("div[class=\"ui-b ui-f9 ui-h4\"]");
+    private By getCode = By.xpath("/html/body/div[3]/div/div/div/div/div/div/div/div/div[3]/button/div");
 
     public boolean logInToAccount(ChromeDriver chromeDriver, WebDriverWait waiting) throws InterruptedException {
         waiting.until(ExpectedConditions.presenceOfElementLocated(buttonLogIn));
@@ -18,9 +18,10 @@ public class ActionsWithAccount {
         waiting.until(ExpectedConditions.presenceOfElementLocated(inputPhone));
         chromeDriver.findElement(inputPhone).sendKeys("9271091935");
         chromeDriver.findElement(getCode).click();
-        sleep(20000);
-        String isCabinet = chromeDriver.findElement(By.cssSelector("div[class=\"b9x5 c2v0\"]"))
+        sleep(15000);
+        String isCabinet = chromeDriver.
+                findElement(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/header/div[1]/div[4]/div[1]/a"))
                 .getAttribute("textContent");
-        return isCabinet.equals("0 Кабинет ");
+        return isCabinet.equals("0 Кабинет");
     }
 }

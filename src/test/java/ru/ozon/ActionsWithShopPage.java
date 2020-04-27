@@ -14,9 +14,11 @@ import static java.lang.Thread.sleep;
 
 public class ActionsWithShopPage {
     // open catalog
-    private By appliance = By.className("c3b1");
-    private By kitchenAppl = By.className("b3s7");
-    private By juicers = By.className("b6f2");
+    private By electric = By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/header/div[2]/div/ul/li[8]/a");
+    private By appliance = By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[3]/div[3]/div/div/div/div/div[6]/a");
+    private By kitchenAppl = By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[3]/div/div[1]/aside/div[2]/a");
+    private By juicers = By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[3]/div[2]/div[1]/div/aside/section/main/div[2]" +
+            "/div[2]/div[6]/div/a");
 
     // search with range price
     private By range = By.cssSelector("input[class=\"ui-av9 ui-av4 ui-c7\"]");
@@ -36,18 +38,19 @@ public class ActionsWithShopPage {
     // sortByPower
     private WebElement minPower;
 
-    public void openCatalog(ChromeDriver chromeDriver, WebDriverWait waiting) {
+    public void openCatalog(ChromeDriver chromeDriver, WebDriverWait waiting) throws InterruptedException {
         //электроника
-        chromeDriver.findElements(By.className("c3c3")).get(7).click();
+        chromeDriver.findElement(electric).click();
         waiting.until(ExpectedConditions.presenceOfElementLocated(appliance));
         // бытовая техника
-        chromeDriver.findElements(appliance).get(5).click();
+        chromeDriver.findElement(appliance).click();
         waiting.until(ExpectedConditions.presenceOfElementLocated(kitchenAppl));
         // техника для кухни
-        chromeDriver.findElements(kitchenAppl).get(5).click();
+        sleep(3000);
+        chromeDriver.findElement(kitchenAppl).click();
         waiting.until(ExpectedConditions.presenceOfElementLocated(juicers));
         // соковыжималки
-        chromeDriver.findElements(juicers).get(7).click();
+        chromeDriver.findElement(juicers).click();
     }
 
     public boolean searchWithPriceRange(ChromeDriver chromeDriver, WebDriverWait waiting) throws InterruptedException {
@@ -70,24 +73,29 @@ public class ActionsWithShopPage {
         return checkJuicers(chromeDriver, waiting);
     }
 
-    public void sortByPriceAndAddProduct(ChromeDriver chromeDriver, WebDriverWait waiting) throws InterruptedException {
+    public void sortByPriceAndAddProduct(ChromeDriver chromeDriver, WebDriverWait waiting, boolean flag) throws InterruptedException {
         sorterBy = By.cssSelector("input[class=\"ui-a1f3\"]");
         waiting.until(ExpectedConditions.presenceOfElementLocated(sorterBy));
         sorterWeb = chromeDriver.findElement(sorterBy);
         sorterWeb.click();
         sorterWeb.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
-        sleep(70000); // для ввода защиты от роботов
+       // if (flag)
+            sleep(2000); // для ввода защиты от роботов
+       //waiting.until(ExpectedConditions.presenceOfElementLocated(juicers));
         List<WebElement> lst = chromeDriver.findElements(By.cssSelector("div[class=\"ui-b ui-f8\"]"));
         lst.get(1).click();
+        sleep(2000);
     }
 
     public boolean changeCountAndCheckPrice(ChromeDriver chromeDriver, WebDriverWait waiting) throws InterruptedException {
-        openBusket = By.cssSelector("a[class=\"a0c1 b8b9 c2v0\"]");
+        openBusket = By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/header/div[1]/div[4]/a[2]");
         waiting.until(ExpectedConditions.presenceOfElementLocated(openBusket));
         List<WebElement> lst = chromeDriver.findElements(openBusket);
         lst.get(lst.size() - 1).click();
-        priceBy = By.className("a4v1");
-        waiting.until(ExpectedConditions.presenceOfElementLocated(priceBy));
+        priceBy = By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div/div/div[3]/div[5]/div[2]/div/div[1]/div[2]/div[2]" +
+                "/div[2]/span");
+        sleep(2000);
+        //waiting.until(ExpectedConditions.presenceOfElementLocated(priceBy));
         priceWeb = chromeDriver.findElement(priceBy);
         int price = parser(priceWeb.getAttribute("innerText"));
         changeCount = chromeDriver.findElement(By.className("ui-a1f3"));
@@ -95,8 +103,9 @@ public class ActionsWithShopPage {
         changeCount.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
         sleep(3000);
         int priceNow = parser(priceWeb.getAttribute("innerText"));
-        String count = chromeDriver.findElement(By.cssSelector("span[class=\"a4u7\"]")).getAttribute("innerText");
-        int counter = parser(String.valueOf(count.charAt(count.indexOf(")") - 1)));
+        String count = chromeDriver.findElement(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div/div/div[3]/div[5]/div[1]" +
+                "/div[1]/div/div[2]/div[3]/div[4]/div/div[1]/div/div[1]/div/div/div")).getAttribute("innerText");
+        int counter = parser(count);
         return price * counter == priceNow;
     }
 

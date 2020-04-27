@@ -15,19 +15,21 @@ public class ActionsWithCity {
     By cityToDelivery;
 
     public boolean changeCityAndCheck(ChromeDriver chromeDriver, WebDriverWait waiting) {
-        cityNowBy = By.cssSelector("span[class=\"c1z1\"]");
+        cityNowBy = By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[2]/div/button/span");
         waiting.until(ExpectedConditions.presenceOfElementLocated(cityNowBy));
         cityNowWeb = chromeDriver.findElement(cityNowBy);
         cityNowWeb.click();
-        inputBoxBy = By.className("ui-au3");
+        inputBoxBy = By.xpath("//*[@id=\"__nuxt\"]/div/div[2]/div/div/div/div/div/label/div/input");
         waiting.until(ExpectedConditions.presenceOfElementLocated(inputBoxBy));
         inputBoxWeb = chromeDriver.findElement(inputBoxBy);
         inputBoxWeb.click();
         inputBoxWeb.sendKeys("Вольск");
-        waiting.until(ExpectedConditions.attributeToBe(chromeDriver.findElement(By.cssSelector("a[class=\"a9\"]")),
-                "innerText", "Вольск, Саратовская область"));
-        inputBoxWeb.sendKeys(Keys.ENTER);
-        chromeDriver.findElements(By.className("c1l")).get(4).click();
+        waiting.until(ExpectedConditions.attributeToBe(chromeDriver.findElement(
+                By.xpath("//*[@id=\"__nuxt\"]/div/div[2]/div/div/div/div/ul/li[1]/a")), "innerText",
+                "Вольск, Саратовская область"));
+        inputBoxWeb.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+        waiting.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[2]/div/ul/li[5]/div/a")));
+        chromeDriver.findElement(By.xpath("//*[@id=\"__nuxt\"]/div/div[1]/div[2]/div/ul/li[5]/div/a")).click();
         cityToDelivery = By.className("city-name");
         waiting.until(ExpectedConditions.presenceOfElementLocated(cityToDelivery));
         return chromeDriver.findElement(cityToDelivery).getAttribute("innerText")
