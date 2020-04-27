@@ -17,7 +17,7 @@
         <aspectj.version>1.8.10</aspectj.version>
         <allure-junit4.version>2.6.0</allure-junit4.version>
 
-        <allure.results.directory>target/allure-results</allure.results.directory>
+        <allure.results.directory>allure-results</allure.results.directory>
 
     </properties>
 

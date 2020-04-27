@@ -2,89 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6bd247c-a543-4fc6-8c86-9dad25d7b5d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/bin/allure" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/bin/allure.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/config/allure-cucumber.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/config/allure-junit.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/config/allure.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/allure-commandline-2.6.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/allure-generator-2.6.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/allure-plugin-api-2.6.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/allure1-model-1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/allure2-model-api-1.0-BETA4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/allure2-model-jackson-1.0-BETA4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/allure2-model-pojo-1.0-BETA4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/commons-beanutils-1.9.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/commons-codec-1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/commons-collections-3.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/commons-io-2.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/commons-lang3-3.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/commons-logging-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/commons-text-1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/config/jetty-logging.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/config/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/flexmark-0.28.18.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/flexmark-util-0.28.18.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/freemarker-2.3.23.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/httpclient-4.5.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/httpcore-4.4.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/jackson-annotations-2.9.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/jackson-core-2.9.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/jackson-databind-2.9.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/jackson-dataformat-xml-2.9.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/jackson-dataformat-yaml-2.9.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/jackson-module-jaxb-annotations-2.9.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/javax.servlet-api-3.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/jaxb-api-2.3.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/jaxb-utils-1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/jcommander-1.72.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/jetty-http-9.4.8.v20171121.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/jetty-io-9.4.8.v20171121.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/jetty-server-9.4.8.v20171121.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/jetty-util-9.4.8.v20171121.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/log4j-1.2.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/opencsv-4.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/properties-2.0.RC5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/slf4j-api-1.7.25.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/slf4j-log4j12-1.7.25.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/snakeyaml-1.18.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/stax2-api-3.1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/tika-core-1.16.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/lib/woodstox-core-5.0.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/behaviors-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/behaviors-plugin/plugin.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/behaviors-plugin/static/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/custom-logo-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/custom-logo-plugin/static/custom-logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/custom-logo-plugin/static/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/junit-xml-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/junit-xml-plugin/junit-xml-plugin-2.6.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/packages-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/packages-plugin/plugin.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/packages-plugin/static/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/screen-diff-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/screen-diff-plugin/static/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/screen-diff-plugin/static/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/trx-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/trx-plugin/trx-plugin-2.6.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/xctest-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/xctest-plugin/lib/xmlwise-1.2.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/xctest-plugin/xctest-plugin-2.6.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/xunit-xml-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.6.0/plugins/xunit-xml-plugin/xunit-xml-plugin-2.6.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hs_err_pid52056.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/replay_pid52056.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ozon/ActionsWithAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ozon/ActionsWithCity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ozon/ActionsWithShopPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ozon/TestAll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ozon/FirstScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ozon/FirstScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ozon/FourthScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ozon/FourthScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ozon/SecondScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ozon/SecondScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ozon/ThirdScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ozon/ThirdScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ozon/WebDriverSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ozon/WebDriverSettings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/ozon/FirstScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/ozon/FirstScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/ozon/FourthScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/ozon/FourthScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/ozon/SecondScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/ozon/SecondScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/ozon/ThirdScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/ozon/ThirdScene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ozon/FirstScene.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ozon/FourthScene.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ozon/SecondScene.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ozon/ThirdScene.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/allure-maven.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/ozon/FirstScene.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/ozon/FourthScene.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/ozon/SecondScene.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/ozon/ThirdScene.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,8 +73,8 @@
       <command value="mvn clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FourthScene.forth">
-    <configuration name="FirstScene.loginAccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestAll.forthScene">
+    <configuration name="TestAll.firstScene" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA" />
       <extension name="coverage">
         <pattern>
@@ -146,14 +83,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.ozon" />
-      <option name="MAIN_CLASS_NAME" value="ru.ozon.FirstScene" />
-      <option name="METHOD_NAME" value="loginAccountTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.ozon.TestAll" />
+      <option name="METHOD_NAME" value="firstScene" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FourthScene.forth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAll.forthScene" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA" />
       <extension name="coverage">
         <pattern>
@@ -162,14 +99,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.ozon" />
-      <option name="MAIN_CLASS_NAME" value="ru.ozon.FourthScene" />
-      <option name="METHOD_NAME" value="forth" />
+      <option name="MAIN_CLASS_NAME" value="ru.ozon.TestAll" />
+      <option name="METHOD_NAME" value="forthScene" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SecondScene.loginAndCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAll.secondScene" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA" />
       <extension name="coverage">
         <pattern>
@@ -178,14 +115,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.ozon" />
-      <option name="MAIN_CLASS_NAME" value="ru.ozon.SecondScene" />
-      <option name="METHOD_NAME" value="loginAndCheck" />
+      <option name="MAIN_CLASS_NAME" value="ru.ozon.TestAll" />
+      <option name="METHOD_NAME" value="secondScene" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SecondScene.updateCityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAll.thirdScene" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA" />
       <extension name="coverage">
         <pattern>
@@ -194,14 +131,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.ozon" />
-      <option name="MAIN_CLASS_NAME" value="ru.ozon.SecondScene" />
-      <option name="METHOD_NAME" value="updateCityTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.ozon.TestAll" />
+      <option name="METHOD_NAME" value="thirdScene" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThirdScene.third" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestThirdScene.third" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA" />
       <extension name="coverage">
         <pattern>
@@ -210,7 +147,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.ozon" />
-      <option name="MAIN_CLASS_NAME" value="ru.ozon.ThirdScene" />
+      <option name="MAIN_CLASS_NAME" value="ru.ozon.TestThirdScene" />
       <option name="METHOD_NAME" value="third" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -219,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FourthScene.forth" />
-        <item itemvalue="JUnit.ThirdScene.third" />
-        <item itemvalue="JUnit.SecondScene.loginAndCheck" />
-        <item itemvalue="JUnit.SecondScene.updateCityTest" />
-        <item itemvalue="JUnit.FirstScene.loginAccountTest" />
+        <item itemvalue="JUnit.TestAll.forthScene" />
+        <item itemvalue="JUnit.TestAll.thirdScene" />
+        <item itemvalue="JUnit.TestAll.secondScene" />
+        <item itemvalue="JUnit.TestAll.firstScene" />
+        <item itemvalue="JUnit.TestThirdScene.third" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +194,17 @@
       <workItem from="1587579285802" duration="912000" />
       <workItem from="1587660722304" duration="14973000" />
       <workItem from="1587713161158" duration="7000" />
-      <workItem from="1587721104015" duration="5197000" />
+      <workItem from="1587721104015" duration="5270000" />
+      <workItem from="1587727373967" duration="4000" />
+      <workItem from="1587733444496" duration="4684000" />
+      <workItem from="1587746590580" duration="9585000" />
+      <workItem from="1587799198618" duration="20600000" />
+      <workItem from="1587915965940" duration="928000" />
+      <workItem from="1587917025346" duration="307000" />
+      <workItem from="1587917665533" duration="1951000" />
+      <workItem from="1587921233352" duration="17648000" />
+      <workItem from="1587972512466" duration="5058000" />
+      <workItem from="1587977930479" duration="1305000" />
     </task>
     <servers />
   </component>
@@ -284,42 +231,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="449" y="151" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1586969197219" />
+    <state x="258" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587735974172">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="258" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1587735974172" />
     <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1586714077642">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586714077642" />
-    <state width="1493" height="290" key="GridCell.Tab.0.bottom" timestamp="1587727193600">
+    <state width="465" height="347" key="GridCell.Tab.0.bottom" timestamp="1587979237713">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="290" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587727193600" />
-    <state width="1493" height="290" key="GridCell.Tab.0.center" timestamp="1587727193600">
+    <state width="465" height="347" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587979237713" />
+    <state width="465" height="347" key="GridCell.Tab.0.center" timestamp="1587979237713">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="290" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587727193600" />
-    <state width="1493" height="290" key="GridCell.Tab.0.left" timestamp="1587727193600">
+    <state width="465" height="347" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587979237713" />
+    <state width="465" height="347" key="GridCell.Tab.0.left" timestamp="1587979237712">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="290" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587727193600" />
-    <state width="1493" height="290" key="GridCell.Tab.0.right" timestamp="1587727193600">
+    <state width="465" height="347" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587979237712" />
+    <state width="465" height="347" key="GridCell.Tab.0.right" timestamp="1587979237713">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="290" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587727193600" />
-    <state width="1493" height="290" key="GridCell.Tab.1.bottom" timestamp="1587727214855">
+    <state width="465" height="347" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587979237713" />
+    <state width="502" height="250" key="GridCell.Tab.1.bottom" timestamp="1587977578839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="290" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587727214855" />
-    <state width="1493" height="290" key="GridCell.Tab.1.center" timestamp="1587727214855">
+    <state width="502" height="250" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587977578839" />
+    <state width="502" height="250" key="GridCell.Tab.1.center" timestamp="1587977578839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="290" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587727214855" />
-    <state width="1493" height="290" key="GridCell.Tab.1.left" timestamp="1587727214855">
+    <state width="502" height="250" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587977578839" />
+    <state width="502" height="250" key="GridCell.Tab.1.left" timestamp="1587977578838">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="290" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587727214855" />
-    <state width="1493" height="290" key="GridCell.Tab.1.right" timestamp="1587727214855">
+    <state width="502" height="250" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587977578838" />
+    <state width="502" height="250" key="GridCell.Tab.1.right" timestamp="1587977578839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="290" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587727214855" />
+    <state width="502" height="250" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587977578839" />
     <state x="349" y="147" key="IDE.errors.dialog" timestamp="1587667329323">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -349,16 +300,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/ozon/ThirdScene.java</url>
-          <line>29</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ru/ozon/ActionsWithShopPage.java</url>
+          <line>53</line>
           <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/ozon/FourthScene.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/QA$TestFourthScene_forth.ic" NAME="TestFourthScene.forth Coverage Results" MODIFIED="1587912297348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.ozon.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/QA$TestAll_thirdScene.ic" NAME="TestAll.thirdScene Coverage Results" MODIFIED="1587935707995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.ozon.*</FILTER>
+    </SUITE>
   </component>
 </project>

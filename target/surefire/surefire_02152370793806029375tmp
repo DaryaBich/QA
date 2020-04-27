@@ -1,0 +1,6 @@
+#surefire_0
+#Mon Apr 27 12:19:45 MSK 2020
+allure.results.directory=C\:\\QA\\target/allure-results
+user.dir=C\:\\QA
+localRepository=C\:\\Users\\Darya\\.m2\\repository
+basedir=C\:\\QA
